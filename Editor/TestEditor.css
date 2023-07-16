@@ -1,0 +1,494 @@
+body{
+    background-color: #666;
+    margin: 0;
+    font-family: 'Open Sans',sans-serif;
+}
+a{
+    text-decoration: none;
+}
+#single-codelab-wrapper header{
+    background-color: #222;
+    font-size: 0;
+}
+header .codelab-left-head,
+header .codelab-right-head{
+    width: 50%;
+    padding: 6px 15px;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+header .site-logo-circle{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 0;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+header .site-logo-circle:hover {
+    transform: rotate(360deg);
+}
+header .site-logo-circle img{
+    width: 100%;
+}
+header .single-codelab-title{
+    color: #fff;
+    font-size: 19px;
+    padding: 3px 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+header .codelab-right-head{
+    text-align: right;
+    padding: 8px 15px 7.5px;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+}
+header .codelab-right-head > li{
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    padding: 2px 10px 3px;
+    margin: 0 0 0 10px;
+    background: linear-gradient(#555,#666);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+header .codelab-right-head > li.active{
+    color: red;
+}
+header .codelab-right-head > li:hover{
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+}
+header .codelab-right-head > li > a{
+    color: #fff;
+}
+header .codelab-right-head input{
+    display: none;
+}
+header .codelab-right-head ul.submenu{
+    /*display: none;*/
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: linear-gradient(#444,#666);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    transform: scaleY(0);
+    transform-origin: top center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    z-index: 1;
+}
+header.footer .codelab-right-head ul.submenu{
+    top: auto;
+    bottom: 100%;
+    transform-origin: bottom center;
+}
+
+header .codelab-right-head ul.submenu a{
+    color: #fff;
+    font-size: 14px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    display: block;
+    transition: all 0.3s ease;
+}
+header .codelab-right-head ul.submenu a:hover{
+    background-color: #777;
+}
+
+/*position the label*/
+header .codelab-right-head label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    margin: 0;
+}
+
+/*show the submenu when input is checked*/
+header .codelab-right-head input:checked ~ ul.submenu {
+    opacity: 1;
+    transform: scaleY(1);
+    top: calc(100% + 5px);
+}
+header.footer .codelab-right-head input:checked ~ ul.submenu {
+    top:auto;
+    bottom: calc(100% + 5px);
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+
+
+.editor{
+    background-color: #2b2626;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    z-index: 0;
+}
+
+.editor.code_full_view{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+
+}
+
+/*#single-codelab-wrapper section.full{
+    height: 50px !important;
+   
+}*/
+
+iframe{
+    border: none;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+}
+
+iframe.full{
+    height: calc(100vh - 45px);
+}
+section.full{
+    height: calc(100vh - 45px);
+}
+
+
+
+
+.gutter {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+    cursor: col-resize;
+}
+
+.gutter.gutter-vertical {
+    cursor: row-resize;
+    background-color: #555;
+}
+
+.split.split-horizontal,
+.gutter.gutter-horizontal {
+    height: 100%;
+    float: left;
+}
+.split {
+    background-color: #666;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*overflow-y: auto;*/
+    /*overflow-x: hidden;*/
+    overflow: hidden;
+}
+
+.split > h5{
+    color: #fff;
+    margin: 0;
+    padding: 3px 5px;
+    display: inline-block;
+    font-size: 17px;
+    float: left;
+}
+.split > .expand,
+.split > .contract{
+    color: #fff;
+    font-size: 14px;
+    margin: 4px 0;
+    float: right;
+    cursor: pointer;
+}
+.split > .contract{
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    z-index: 2;
+}
+.split .drop-down{
+    float: right;
+    display: inline-block;
+    vertical-align: top;
+    width: 23px;
+    line-height: 1;
+    margin: 6px 0 0 4px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 2px;
+    position: relative;
+}
+.split .drop-down input.js,
+.split .drop-down input{
+    display: none;
+}
+.split .drop-down ul.submenu,
+.split .drop-down ul.submenu.js{
+    background: linear-gradient(#444,#666);
+    white-space: nowrap;
+    padding: 5px;
+    margin: 0;
+    list-style: none;
+    opacity: 1;
+    transform: scaleY(0);
+    transform-origin: top center;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.split .drop-down ul.submenu a,
+.split .drop-down ul.submenu.js a{
+    color: #fff;
+    font-size: 13px;
+    padding: 2px 5px;
+    margin: 0 0 3px;
+    display: block;
+}
+
+/*position the label*/
+.split .drop-down label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    margin: 0;
+}
+
+/*show the submenu when input is checked*/
+.split .drop-down input:checked ~ ul.submenu,
+.split .drop-down input.js:checked ~ ul.submenu.js {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.ace_scrollbar-v::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+.ace_scrollbar-v::-webkit-scrollbar-track {
+    /*background: tra;*/
+}
+
+/* Handle */
+.ace_scrollbar-v::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+.ace_scrollbar-v::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+footer{
+font-size: 14px;
+padding: 3px 15px 4px;
+}
+
+/*========================*/
+/* Fontello CSS Start */
+/*========================*/
+
+@font-face {
+    font-family: 'fontello';
+    src: url('../fonts/fontello.eot?25461311');
+    src: url('../fonts/fontello.eot?25461311#iefix') format('embedded-opentype'),
+    url('../fonts/fontello.woff2?25461311') format('woff2'),
+    url('../fonts/fontello.woff?25461311') format('woff'),
+    url('../fonts/fontello.ttf?25461311') format('truetype'),
+    url('../fonts/fontello.svg?25461311#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?25461311#fontello') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-search:before { content: '\e800'; } /* 'î €' */
+.icon-heart:before { content: '\e801'; } /* 'î ' */
+.icon-heart-empty:before { content: '\e802'; } /* 'î ‚' */
+.icon-star:before { content: '\e803'; } /* 'î ƒ' */
+.icon-star-empty:before { content: '\e804'; } /* 'î „' */
+.icon-star-half:before { content: '\e805'; } /* 'î …' */
+.icon-user:before { content: '\e806'; } /* 'î †' */
+.icon-users:before { content: '\e807'; } /* 'î ‡' */
+.icon-plus:before { content: '\e808'; } /* 'î ˆ' */
+.icon-cancel-circled2:before { content: '\e809'; } /* 'î ‰' */
+.icon-cancel-circled:before { content: '\e80a'; } /* 'î Š' */
+.icon-cancel:before { content: '\e80b'; } /* 'î ‹' */
+.icon-ok-circled2:before { content: '\e80c'; } /* 'î Œ' */
+.icon-ok-circled:before { content: '\e80d'; } /* 'î ' */
+.icon-ok:before { content: '\e80e'; } /* 'î Ž' */
+.icon-th-list:before { content: '\e80f'; } /* 'î ' */
+.icon-camera:before { content: '\e810'; } /* 'î ' */
+.icon-picture:before { content: '\e811'; } /* 'î ‘' */
+.icon-minus-circled:before { content: '\e812'; } /* 'î ’' */
+.icon-link:before { content: '\e813'; } /* 'î “' */
+.icon-home:before { content: '\e814'; } /* 'î ”' */
+.icon-attach:before { content: '\e815'; } /* 'î •' */
+.icon-lock:before { content: '\e816'; } /* 'î –' */
+.icon-lock-open:before { content: '\e817'; } /* 'î —' */
+.icon-eye:before { content: '\e818'; } /* 'î ˜' */
+.icon-pin:before { content: '\e819'; } /* 'î ™' */
+.icon-forward:before { content: '\e81a'; } /* 'î š' */
+.icon-download:before { content: '\e81b'; } /* 'î ›' */
+.icon-thumbs-down:before { content: '\e81c'; } /* 'î œ' */
+.icon-thumbs-up:before { content: '\e81d'; } /* 'î ' */
+.icon-bookmark:before { content: '\e81e'; } /* 'î ž' */
+.icon-tags:before { content: '\e81f'; } /* 'î Ÿ' */
+.icon-export:before { content: '\e820'; } /* 'î  ' */
+.icon-pencil:before { content: '\e821'; } /* 'î ¡' */
+.icon-edit:before { content: '\e822'; } /* 'î ¢' */
+.icon-print:before { content: '\e823'; } /* 'î £' */
+.icon-comment:before { content: '\e824'; } /* 'î ¤' */
+.icon-chat:before { content: '\e825'; } /* 'î ¥' */
+.icon-location:before { content: '\e826'; } /* 'î ¦' */
+.icon-trash-empty:before { content: '\e827'; } /* 'î §' */
+.icon-phone:before { content: '\e828'; } /* 'î ¨' */
+.icon-folder:before { content: '\e829'; } /* 'î ©' */
+.icon-cog:before { content: '\e82a'; } /* 'î ª' */
+.icon-zoom-out:before { content: '\e82b'; } /* 'î «' */
+.icon-zoom-in:before { content: '\e82c'; } /* 'î ¬' */
+.icon-resize-small:before { content: '\e82d'; } /* 'î ­' */
+.icon-resize-full:before { content: '\e82e'; } /* 'î ®' */
+.icon-login:before { content: '\e82f'; } /* 'î ¯' */
+.icon-logout:before { content: '\e830'; } /* 'î °' */
+.icon-up-circled2:before { content: '\e831'; } /* 'î ±' */
+.icon-right-dir:before { content: '\e832'; } /* 'î ²' */
+.icon-left-dir:before { content: '\e833'; } /* 'î ³' */
+.icon-up-dir:before { content: '\e834'; } /* 'î ´' */
+.icon-down-dir:before { content: '\e835'; } /* 'î µ' */
+.icon-leaf:before { content: '\e836'; } /* 'î ¶' */
+.icon-check:before { content: '\e837'; } /* 'î ·' */
+.icon-ok-1:before { content: '\e838'; } /* 'î ¸' */
+.icon-spin6:before { content: '\e839'; } /* 'î ¹' */
+.icon-cancel-1:before { content: '\e83a'; } /* 'î º' */
+.icon-right-open:before { content: '\e83b'; } /* 'î »' */
+.icon-left-open:before { content: '\e83c'; } /* 'î ¼' */
+.icon-bookmark-empty:before { content: '\f097'; } /* 'ï‚—' */
+.icon-phone-squared:before { content: '\f098'; } /* 'ï‚˜' */
+.icon-twitter:before { content: '\f099'; } /* 'ï‚™' */
+.icon-facebook:before { content: '\f09a'; } /* 'ï‚š' */
+.icon-github-circled:before { content: '\f09b'; } /* 'ï‚›' */
+.icon-resize-full-alt:before { content: '\f0b2'; } /* 'ï‚²' */
+.icon-pinterest-circled:before { content: '\f0d2'; } /* 'ïƒ’' */
+.icon-gplus:before { content: '\f0d5'; } /* 'ïƒ•' */
+.icon-mail-alt:before { content: '\f0e0'; } /* 'ïƒ ' */
+.icon-linkedin:before { content: '\f0e1'; } /* 'ïƒ¡' */
+.icon-download-cloud:before { content: '\f0ed'; } /* 'ïƒ­' */
+.icon-bell-alt:before { content: '\f0f3'; } /* 'ïƒ³' */
+.icon-desktop:before { content: '\f108'; } /* 'ï„ˆ' */
+.icon-laptop:before { content: '\f109'; } /* 'ï„‰' */
+.icon-tablet:before { content: '\f10a'; } /* 'ï„Š' */
+.icon-mobile:before { content: '\f10b'; } /* 'ï„‹' */
+.icon-quote-left:before { content: '\f10d'; } /* 'ï„' */
+.icon-quote-right:before { content: '\f10e'; } /* 'ï„Ž' */
+.icon-reply:before { content: '\f112'; } /* 'ï„’' */
+.icon-star-half-alt:before { content: '\f123'; } /* 'ï„£' */
+.icon-direction:before { content: '\f124'; } /* 'ï„¤' */
+.icon-help:before { content: '\f128'; } /* 'ï„¨' */
+.icon-attention-alt:before { content: '\f12a'; } /* 'ï„ª' */
+.icon-rocket:before { content: '\f135'; } /* 'ï„µ' */
+.icon-lock-open-alt:before { content: '\f13e'; } /* 'ï„¾' */
+.icon-link-ext-alt:before { content: '\f14c'; } /* 'ï…Œ' */
+.icon-euro:before { content: '\f153'; } /* 'ï…“' */
+.icon-pound:before { content: '\f154'; } /* 'ï…”' */
+.icon-dollar:before { content: '\f155'; } /* 'ï…•' */
+.icon-rupee:before { content: '\f156'; } /* 'ï…–' */
+.icon-yen:before { content: '\f157'; } /* 'ï…—' */
+.icon-doc-inv:before { content: '\f15b'; } /* 'ï…›' */
+.icon-thumbs-up-alt:before { content: '\f164'; } /* 'ï…¤' */
+.icon-thumbs-down-alt:before { content: '\f165'; } /* 'ï…¥' */
+.icon-youtube:before { content: '\f167'; } /* 'ï…§' */
+.icon-youtube-play:before { content: '\f16a'; } /* 'ï…ª' */
+.icon-instagram:before { content: '\f16d'; } /* 'ï…­' */
+.icon-tumblr:before { content: '\f173'; } /* 'ï…³' */
+.icon-android:before { content: '\f17b'; } /* 'ï…»' */
+.icon-skype:before { content: '\f17e'; } /* 'ï…¾' */
+.icon-right-circled2:before { content: '\f18e'; } /* 'ï†Ž' */
+.icon-left-circled2:before { content: '\f190'; } /* 'ï†' */
+.icon-graduation-cap:before { content: '\f19d'; } /* 'ï†' */
+.icon-cube:before { content: '\f1b2'; } /* 'ï†²' */
+.icon-cubes:before { content: '\f1b3'; } /* 'ï†³' */
+.icon-recycle:before { content: '\f1b8'; } /* 'ï†¸' */
+.icon-file-code:before { content: '\f1c9'; } /* 'ï‡‰' */
+.icon-paper-plane:before { content: '\f1d8'; } /* 'ï‡˜' */
+.icon-paper-plane-empty:before { content: '\f1d9'; } /* 'ï‡™' */
+.icon-sliders:before { content: '\f1de'; } /* 'ï‡ž' */
+.icon-share:before { content: '\f1e0'; } /* 'ï‡ ' */
+.icon-trash:before { content: '\f1f8'; } /* 'ï‡¸' */
+.icon-toggle-off:before { content: '\f204'; } /* 'ïˆ„' */
+.icon-toggle-on:before { content: '\f205'; } /* 'ïˆ…' */
+.icon-pinterest:before { content: '\f231'; } /* 'ïˆ±' */
+.icon-whatsapp:before { content: '\f232'; } /* 'ïˆ²' */
+.icon-user-plus:before { content: '\f234'; } /* 'ïˆ´' */
+.icon-github-squared:before { content: '\f300'; } /* 'ïŒ€' */
+.icon-twitter-squared:before { content: '\f304'; } /* 'ïŒ„' */
+.icon-facebook-squared:before { content: '\f308'; } /* 'ïŒˆ' */
+.icon-instagram-1:before { content: '\f31e'; } /* 'ïŒž' */
+
+/*========================*/
+/* Fontello CSS End */
+/*========================*/

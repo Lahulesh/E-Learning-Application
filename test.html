@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-3</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../Editor/Editor.css" />
+    <style>
+      #nav ul {
+        list-style: none;
+        font-family: verdana, sans-serif;
+        font-weight: bold;
+        text-align: left;
+        width: 250px;
+      }
+      #nav ul li.link {
+        background-color: #224bcf;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        padding: 18px 10px;
+        text-align: center;
+        font-size: 1.7rem;
+      }
+
+      #nav ul li.link:hover {
+        background-color: #fa1d86;
+        color: #fff;
+      }
+      #nav ul li.link.active {
+        background-color: #fa1d86 !important;
+      }
+      #nav ul li.link a {
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+      }
+
+      .bgclass {
+        background-color: #fa1d86;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header section starts  -->
+    <header class="header">
+      <a href="../home.html" class="logo">
+        <i class="fas fa-graduation-cap"></i> E-Learning
+      </a>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="../home.html">home</a></li>
+          <li><a href="../about.html">about</a></li>
+          <li>
+            <a href="#">courses</a>
+            <ul>
+              <li><a href="../frontEnd.html">Front End</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="#">pages +</a>
+                <ul>
+                    <li><a href="teachers.html">teachers</a></li>
+                    <li><a href="blog.html">blogs</a></li>
+                </ul>
+            </li> -->
+          <li><a href="../contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header section ends -->
+
+    <section class="heading">
+      <h3>Front End Development</h3>
+      <p>
+        <a href="../home.html">home >></a>
+        <a href="../frontEnd.html">Front End >></a> CSS 3
+      </p>
+    </section>
+
+    <section class="contact">
+      <div class="row">
+        <nav>
+          <div id="nav">
+            <ul>
+                <li class="link active"><a href="#" id="CSSIntroductionanchor" onclick="divVisibility('CSSIntroduction');">CSS Introduction</a></li>
+                <li class="link"><a href="#" id="Implementationanchor" onclick="divVisibility('Implementation');">Implementation</a></li>
+                <li class="link"><a href="#" id="CSSSyntaxanchor" onclick="divVisibility('CSSSyntax');">CSS Syntax</a></li>
+              <li class="link"><a href="#">Articles</a></li>
+              <li class="link"><a href="#">Archives</a></li>
+              <li class="link"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="shadows" id="CSSIntroduction" style="display: block">
+          <h1>What is CSS</h1>
+          <p>
+            CSS stands for Cascading Style Sheets. <br /><br />It is a style
+            sheet language used to describe the look and formatting of a
+            document written in HTML (Hypertext Markup Language) or XML
+            (Extensible Markup Language). <br /><br />CSS separates the
+            presentation of a document from its structure, allowing web
+            designers to control the visual appearance of web pages.<br /><br />CSS
+            operates on the concept of selectors, which are used to target
+            specific HTML elements and apply styles to them. Selectors can
+            target elements based on their tag name, class, ID, attributes, or
+            their position within the document structure.
+          </p>
+          <img
+            class="centerimg"
+            src="https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png"
+            alt="css3-logo-png-transparent"
+          />
+        </div>
+        <div class="shadows" id="Implementation" style="display: none">
+          <h1>How to Add CSS</h1>
+          <ul>
+            <p>
+              <b>Inline CSS:</b> You can add CSS styles directly within the HTML
+              elements using the style attribute.
+            </p>
+            <p>
+              <b>Internal CSS:</b> You can include CSS styles within the style
+              tags in the head section of your HTML document.
+            </p>
+            <p>
+              <b>External CSS:</b> You can create a separate CSS file with a
+              .css extension and link it to your HTML document using the link
+              tag
+            </p>
+            <img
+              class="removecenter"
+              src="../images/Asset/TypeOfCss.png"
+              alt="css3-logo-png-transparent"
+            />
+          </ul>
+        </div>
+        <div class="shadows" id="CSSSyntax" style="display: none">
+          <h1>CSS Syntax</h1>
+          <p>
+            CSS syntax consists of a set of rules and declarations that define
+            how styles should be applied to HTML elements. The basic structure
+            of CSS syntax is as follows:
+          </p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code">
+              selector { property: value; /* Additional properties and values */
+              }
+            </code>
+          </deckgo-highlight-code>
+          <p>Let's break down each component of the CSS syntax:</p>
+          <ol>
+            <li>
+              <b>Selector</b>: A selector determines which HTML elements the
+              styles should be applied to. It can be a tag name, class, ID, or
+              other attribute. <br />For example, p targets all p elements,
+              .my-class targets elements with the class "my-class," and #my-id
+              targets an element with the ID "my-id."
+            </li>
+            <br /><br />
+            <li>
+              <b>Property</b>: A property defines a specific aspect of an
+              element's style that you want to change. Examples include color,
+              font-size, background-color, margin, etc.
+            </li>
+            <br /><br />
+            <li>
+              <b>Value</b>: A value specifies the setting for a particular
+              property. It can be a color, size, length, keyword, or other
+              relevant value. For example, red, 14px, #FFFFFF, italic, etc.
+            </li>
+            <br /><br />
+            <li>
+              <b>Declaration</b>: A declaration is made up of a property-value
+              pair, enclosed in curly braces {}. It defines how a specific
+              property should be set for the selected element(s). You can have
+              multiple declarations within a selector.
+            </li>
+            <br /><br />
+          </ol>
+          <p>Here's an example that demonstrates the CSS syntax:</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code">
+              h1 { color: blue; font-size: 24px; text-align: center; }
+            </code>
+          </deckgo-highlight-code>
+          <p>
+            In this example, the selector h1 targets all <b>h1</b> elements. The
+            subsequent declarations specify that the color should be blue, the
+            font size should be 24 pixels, and the text should be aligned to the
+            center.
+          </p>
+          <br /><br />
+          <p>
+            CSS syntax allows you to apply styles to multiple selectors by
+            separating them with commas. For example:
+          </p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> h1, h2 { color: green; } </code>
+          </deckgo-highlight-code>
+          <p>
+            In this case, both <b>h1</b> and <b>h2</b> elements will have the
+            color set to green.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section starts  -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>explore</h3>
+          <a href="../home.html"> <i class="fas fa-arrow-right"></i> home </a>
+          <a href="../about.html"> <i class="fas fa-arrow-right"></i> about </a>
+          <!-- <a href="course-1.html"> <i class="fas fa-arrow-right"></i> course-1 </a>
+            <a href="course-2.html"> <i class="fas fa-arrow-right"></i>course-2 </a>
+            <a href="course-3.html"> <i class="fas fa-arrow-right"></i> course-3 </a>
+            <a href="teachers.html"> <i class="fas fa-arrow-right"></i> teachers </a>
+            <a href="blog.html"> <i class="fas fa-arrow-right"></i> blog </a>
+            <a href="contact.html"> <i class="fas fa-arrow-right"></i> contact </a> -->
+        </div>
+
+        <div class="box">
+          <h3>categories</h3>
+          <!-- <a href="#"> <i class="fas fa-arrow-right"></i> web design </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> graphic design</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> UI / UX design</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> seo marketing</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> digital marketing</a> -->
+          <a href="#"> <i class="fas fa-arrow-right"></i> email marketing</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> all courses</a>
+        </div>
+
+        <!-- <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> my account </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> feedback </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> help center </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> certificates </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> newsletter </a>
+        </div> -->
+
+        <div class="box">
+          <h3>follow us</h3>
+          <!-- <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a> -->
+          <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+          <a href="#"> <i class="fab fa-github"></i> github </a>
+        </div>
+      </div>
+
+      <div class="credit">
+        created by <span>Lahulesh Chourasiya</span> | all rights reserved!
+      </div>
+    </section>
+    <!-- footer section ends -->
+
+    <!-- custom js file link  -->
+    <script src="../js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"
+    ></script>
+    <!-- <script>
+       var anchordiv = ["CSSIntroductionanchor", "Implementationanchor", "CSSSyntaxanchor"];
+       var divs = ["CSSIntroduction", "Implementation", "CSSSyntax"];
+        var visibleDivId = null;
+        function divVisibility(divId) {
+          if(visibleDivId === divId) {
+            visibleDivId = null;
+          } else {
+            visibleDivId = divId;
+          }
+          hideNonVisibleDivs();
+        }
+        function hideNonVisibleDivs() {
+          var i, divId, div;
+          for(i = 0; i < divs.length; i++) {
+            divId = divs[i];
+            div = document.getElementById(divId);
+            let index = divs.indexOf(visibleDivId);
+            var valueAtIndex1 = anchordiv[index];
+            console.log(visibleDivId);
+            if(visibleDivId === divId) {                            
+              div.style.display = "block";
+              //document.getElementById(valueAtIndex1).classList.add("bgclass");
+              document.getElementById(valueAtIndex1).style.backgroundColor = "#fa1d86";
+              //div.classList.add("bgclass");
+            } else {
+              //console.log(index+" Indexxxxxxxxxxxxxxx");
+              div.style.display = "none";
+              //document.getElementById(valueAtIndex1).style.backgroundColor = "#fa1d86";
+              //console.log("ID :-----------" + visibleDivId + "Testing :  "+ index +"Anchor Index  "+ valueAtIndex1);
+              //document.getElementById(valueAtIndex1).classList.remove("bgclass");
+              //document.getElementById(valueAtIndex1).style.backgroundColor = "";
+              document.getElementById(valueAtIndex1).style.backgroundColor = "none";
+            }
+          }
+        }
+    </script> -->
+    <script>
+      function toggleItem(elem) {
+        for (var i = 0; i < elem.length; i++) {
+          elem[i].addEventListener("click", function (e) {
+            var current = this;
+            for (var i = 0; i < elem.length; i++) {
+              if (current != elem[i]) {
+                elem[i].classList.remove("active");
+              } else if (current.classList.contains("active") === true) {
+                current.classList.remove("active");
+              } else {
+                current.classList.add("active");
+              }
+            }
+            e.preventDefault();
+          });
+        }
+      }
+      toggleItem(document.querySelectorAll(".link"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-3</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../Editor/Editor.css" />
+    <style>
+      #nav ul {
+        list-style: none;
+        font-family: verdana, sans-serif;
+        font-weight: bold;
+        text-align: left;
+        width: 250px;
+      }
+
+      #nav ul li.link {
+        background-color: #224bcf;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        padding: 18px 10px;
+        text-align: center;
+        font-size: 1.7rem;
+        cursor: pointer;
+        visibility: visible;
+      }
+
+      #nav ul li.link:hover {
+        background-color: #fa1d86;
+        color: #fff;
+      }
+
+      #nav ul li.link.active {
+        background-color: #fa1d86 !important;
+      }
+
+      #nav ul li.link a {
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+      }
+
+      .sticky {
+        margin-top: 70px;
+        position: fixed;
+        top: 0;
+        visibility: visible;
+      }
+
+      .fixed {
+        position: fixed;
+        top: 85px;
+      }
+
+      .animation {
+        transition: all .2s linear;
+      }
+
+      .shadows {
+        margin-left: 245px;
+      }
+
+      /* #navbar {
+      overflow: hidden;
+    } */
+    </style>
+  </head>
+  <body>
+    <!-- header section starts  -->
+    <header class="header">
+      <a href="../home.html" class="logo">
+        <i class="fas fa-graduation-cap"></i> E-Learning </a>
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="../home.html">home</a>
+          </li>
+          <li>
+            <a href="../about.html">about</a>
+          </li>
+          <li>
+            <a href="#">courses</a>
+            <ul>
+              <li>
+                <a href="../frontEnd.html">Front End</a>
+              </li>
+            </ul>
+          </li>
+          <!-- <li><a href="#">pages +</a><ul><li><a href="teachers.html">teachers</a></li><li><a href="blog.html">blogs</a></li></ul></li> -->
+          <li>
+            <a href="../contact.html">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header section ends -->
+    <section class="heading">
+      <h3>Front End Development</h3>
+      <p>
+        <a href="../home.html">home >></a>
+        <a href="../frontEnd.html">Front End >></a> CSS 3
+      </p>
+    </section>
+    <section class="contact">
+      <div class="row">
+        <nav id="navbar" style="width: 10px;">
+          <div id="nav">
+            <ul>
+              <li class="link active" id="CSSIntroductionanchor" onclick="divVisibility('CSSIntroduction');">
+                <a href="#">CSS Introduction</a>
+              </li>
+              <li class="link" id="Implementationanchor" onclick="divVisibility('Implementation');">
+                <a href="#">Implementation</a>
+              </li>
+              <li class="link" id="CSSSyntaxanchor" onclick="divVisibility('CSSSyntax');">
+                <a href="#">CSS Syntax</a>
+              </li>
+              <li class="link" id="CSSCommentsanchor" onclick="divVisibility('CSSComments');">
+                <a href="#">CSS Comments</a>
+              </li>
+              <li class="link" id="CSSColouranchor" onclick="divVisibility('CSSColour');">
+                <a href="#">CSS Colour</a>
+              </li>
+              <li class="link" id="CSSBackgroundanchor" onclick="divVisibility('CSSBackground');">
+                <a href="#">CSS Background</a>
+              </li>
+              <li class="link" id="CSSBorderanchor" onclick="divVisibility('CSSBorder');">
+                <a href="#">CSS Border</a>
+              </li>
+              <li class="link" id="Marginanchor" onclick="divVisibility('CSSMargin');">
+                <a href="#">CSS Margin</a>
+              </li>
+              <li class="link" id="CSSPaddinganchor" onclick="divVisibility('CSSPadding');">
+                <a href="#">CSS Padding</a>
+              </li>
+              <li class="link" id="CSSBoxModelanchor" onclick="divVisibility('CSSBoxModel');">
+                <a href="#">CSS Box Model</a>
+              </li>
+              <li class="link" id="CSSHeightanchor" onclick="divVisibility('CSSHeight');">
+                <a href="#">CSS Height</a>
+              </li>
+              <li class="link" id="CSSWidthanchor" onclick="divVisibility('CSSWidth');">
+                <a href="#">CSS Width</a>
+              </li>
+              <li class="link" id="CSSPositionanchor" onclick="divVisibility('CSSPosition');">
+                <a href="#">CSS Position</a>
+              </li>
+              <li class="link" id="CSSFontsanchor" onclick="divVisibility('CSSFonts');">
+                <a href="#">CSS Fonts</a>
+              </li>
+              <li class="link" id="CSSIconsanchor" onclick="divVisibility('CSSIcons');">
+                <a href="#">Icons</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="shadows" id="CSSIntroduction" style="display: block;">
+          <h1>What is CSS</h1>
+          <p>CSS stands for Cascading Style Sheets. <br />
+            <br />It is a stylesheet language used to describe the look and formatting of adocument written in HTML (Hypertext Markup Language) or XML(Extensible Markup Language). <br />
+            <br />CSS separates the presentation of a document from its structure, allowing web designers to control the visual appearance of web pages. <br />
+            <br />CSS operates on the concept of selectors, which are used to target specific HTML elements and apply styles to them. Selectors cantarget elements based on their tag name, class, ID, attributes, or their position within the document structure.
+          </p>
+          <img class="centerimg" src="https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png" alt="css3-logo-png-transparent" />
+        </div>
+        <div class="shadows" id="Implementation" style="display: none;">
+          <h1>How to Add CSS</h1>
+          <ul>
+            <p>
+              <b>Inline CSS:</b> You can add CSS styles directly within the HTML elements using the style attribute.
+            </p>
+            <p>
+              <b>Internal CSS:</b> You can include CSS styles within the style tags in the head section of your HTML document.
+            </p>
+            <p>
+              <b>External CSS:</b> You can create a separate CSS file with a .css extension and link it to your HTML document using the link tag
+            </p>
+            <img class="removecenter" src="../images/Asset/TypeOfCss.png" alt="css3-logo-png-transparent" />
+          </ul>
+        </div>
+        <div class="shadows" id="CSSSyntax" style="display: none">
+          <h1>CSS Syntax</h1>
+          <p> CSS syntax consists of a set of rules and declarations that define how styles should be applied to HTML elements. The basic structure of CSS syntax is as follows: </p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+              selector {
+                property: value;
+                /* Additional properties and values */
+              }
+            </code>
+          </deckgo-highlight-code>
+          <p>Let's break down each component of the CSS syntax:</p>
+          <ol>
+            <li>
+              <b>Selector</b>: A selector determines which HTML elements the styles should be applied to. It can be a tag name, class, ID, or other attribute. <br />For example, p targets all p elements, .my-class targets elements with the class "my-class," and #my-id targets an element with the ID "my-id."
+            </li>
+            <br />
+            <br />
+            <li>
+              <b>Property</b>: A property defines a specific aspect of an element's style that you want to change. Examples include color, font-size, background-color, margin, etc.
+            </li>
+            <br />
+            <br />
+            <li>
+              <b>Value</b>: A value specifies the setting for a particular property. It can be a color, size, length, keyword, or other relevant value. For example, red, 14px, #FFFFFF, italic, etc.
+            </li>
+            <br />
+            <br />
+            <li>
+              <b>Declaration</b>: A declaration is made up of a property-value pair, enclosed in curly braces {}. It defines how a specific property should be set for the selected element(s). You can have multiple declarations within a selector.
+            </li>
+            <br />
+            <br />
+          </ol>
+          <p>Here's an example that demonstrates the CSS syntax:</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code">
+              h1 {
+                color: blue;
+                font-size: 24px;
+                text-align: center;
+              }
+            </code>
+          </deckgo-highlight-code>
+          <p> In this example, the selector h1 targets all <b>h1</b> elements. The subsequent declarations specify that the color should be blue, the font size should be 24 pixels, and the text should be aligned to the center. </p>
+          <br />
+          <br />
+          <p> CSS syntax allows you to apply styles to multiple selectors by separating them with commas. For example: </p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+              h1, h2 {
+                color: green;
+              }
+            </code>
+          </deckgo-highlight-code>
+          <p> In this case, both <b>h1</b> and <b>h2</b> elements will have the color set to green. </p>
+        </div>
+        <div class="shadows" id="CSSComments" style="display: none">
+          <h1>CSS Comments</h1>
+          <p>CSS comments are used to add explanatory or descriptive notes within your CSS code. Comments are ignored by the browser and have no impact on the rendering of the web page. They are solely meant for human readability and can be helpful for documentation, organization, or temporarily disabling code snippets.</p>                    
+          <p><b>Single-line comments</b>: To create a single-line comment, you can use the /* */ syntax. Anything between /* and */ is treated as a comment and will not be interpreted by the browser. Here's an example:</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+              /* This is a single-line comment */
+                p {
+                  color: red;
+                }
+            </code>
+          </deckgo-highlight-code>
+          <p><b>Multi-line comments</b>: If you need to add comments spanning multiple lines, you can use the /* */ syntax as well. Here's an example:</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+              /* This is a
+              multi-line
+              comment */
+            p {
+              color: red;
+            }
+            </code>
+          </deckgo-highlight-code>
+        </div>
+        <div class="shadows" id="CSSColour" style="display: none">
+          <h1>CSS Colour</h1>
+          <p> CSS provides several ways to define colors, including named colors, hexadecimal colors, RGB values, HSL values, and more. Here are some commonly used methods to specify colors in CSS:</p>          
+          <p>Let's break down each component of the CSS syntax:</p>
+          <ol>
+            <li>
+              <b>Named Colors</b>: CSS has predefined names for a set of colors. For example, you can use red, blue, green, yellow, etc. Here's an example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+p {
+  color: red;
+}                                    
+                </code>
+              </deckgo-highlight-code>
+              <p>In this case, the text color of <b>p</b> elements will be set to red.</p>
+            </li>
+            <li>
+              <b>Hexadecimal Colors</b>: Hexadecimal colors are represented by a hash sign (#) followed by a combination of six hexadecimal digits. Each pair of digits represents the intensity of red, green, and blue (RGB) respectively. For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+p {
+  color: #FF0000;
+}                                    
+                </code>
+              </deckgo-highlight-code>
+              <p>In this case, the text color of <b>p</b> elements will be set to red (#FF0000).</p>
+            </li>
+            <li>
+              <b>RGB Colors</b>: RGB values define a color using the intensity values of red, green, and blue, each ranging from 0 to 255. The syntax for specifying RGB colors is rgb(red, green, blue). For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+p {
+  color: rgb(255, 0, 0);
+}                                    
+                </code>
+              </deckgo-highlight-code>
+              <p>In this case, the text color of <b>p</b> elements will be set to red.</p>
+            </li>
+            <li>
+              <b>RGBA Colors</b>: RGBA colors are similar to RGB, but with an additional alpha value to represent opacity. The alpha value ranges from 0 to 1, where 0 is fully transparent, and 1 is fully opaque. Here's an example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+p {
+  rgba(255, 0, 0, 0.5);
+}                                    
+                </code>
+              </deckgo-highlight-code>
+              <p>In this case, the text color of <b>p</b> elements to red with 50% opacity.</p>
+            </li>
+            <li>
+              <b>HSL Colors</b>: HSL (Hue, Saturation, Lightness) values define colors based on their hue, saturation, and lightness. The syntax for specifying HSL colors is hsl(hue, saturation, lightness). For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+p {
+  color: hsl(0, 100%, 50%);
+}                                    
+                </code>
+              </deckgo-highlight-code>
+              <p>In this case, the text color of <b>p</b> elements will be set to a fully saturated red.</p>
+            </li>
+            <li>
+              <b>HSLA Colors</b>: HSLA colors are similar to HSL, but with an additional alpha value for opacity. The alpha value ranges from 0 to 1. Here's an example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+p {
+  color: hsla(0, 100%, 50%, 0.5);
+}                                    
+                </code>
+              </deckgo-highlight-code>
+              <p>In this case, the text color of <b>p</b> elements to a fully saturated red with 50% opacity.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="shadows" id="CSSBackground" style="display: none">
+          <h1>Background Colour</h1>
+          <p>In CSS, the background property is used to define the background styles for an element. It allows you to set various background-related properties such as color, image, position, repeat, and more. Here are some commonly used background-related properties:</p>
+          <p>Let's break down each component of the CSS syntax:</p>
+          <ol>
+            <li>
+              <b>Background Colors</b>: You can set the background color of an element using the background-color property. For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+body {
+  background-color: #F0F0F0;
+}                                    
+                </code>
+              </deckgo-highlight-code>
+              <p>This code sets the background color of the <b>Body</b> element to a light gray (#F0F0F0).</p>
+            </li>
+            <li>
+              <b>Background Image</b>: You can set a background image for an element using the background-image property. For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+div {
+  background-image: url("image.jpg");
+}                                   
+                </code>
+              </deckgo-highlight-code>
+              <p>In this case, the div element will have an image called "image.jpg" as its background.</p>
+            </li>
+            <li>
+              <b>Background Repeat</b>: The background-repeat property controls how the background image is repeated or positioned. Common values include repeat (default), no-repeat, repeat-x, and repeat-y. For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+div {
+  background-repeat: no-repeat;
+}                                   
+                </code>
+              </deckgo-highlight-code>
+              <p>This code ensures that the background image of the div element is not repeated.</p>
+            </li>
+            <li>
+              <b>Background Position</b>: The background-position property determines the starting position of the background image. It accepts values such as top, bottom, left, right, center, or specific pixel or percentage values. For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+div {
+  background-position: center;
+}                                   
+                </code>
+              </deckgo-highlight-code>
+              <p>In this case, the background image of the div element will be centered.</p>
+            </li>
+            <li>
+              <b>Background Size</b>: The background-size property allows you to specify the size of the background image. You can use values like cover, contain, specific pixel dimensions, or percentages. For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+div {
+  background-size: cover;
+}
+                </code>
+              </deckgo-highlight-code>
+              <p>This code ensures that the background image of the div element covers the entire element without distortion.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="shadows" id="CSSBorder" style="display: none">
+          <h1>CSS Border</h1>
+          <p>In CSS, the border property is used to define the style, width, and color of an element's border. It allows you to customize the appearance of the border surrounding an element.</p>
+          <p>Here are some commonly used border-related properties:</p>
+          <ol>
+            <li>
+              <b>Border Style</b>: The border-style property defines the style of the border. Common values include solid (default), dashed, dotted, double, groove, ridge, inset, and outset. For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+div {
+  border-style: dashed;
+}                                    
+                </code>
+              </deckgo-highlight-code>
+              <p>This code sets the border style of the div element to dashed.</p>
+            </li>
+            <li>
+              <b>Border Width</b>: The border-width property sets the width of the border. You can specify it using keywords such as thin, medium, or thick, or by specifying a specific pixel value. For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+div {
+  border-width: 2px;
+}                                  
+                </code>
+              </deckgo-highlight-code>
+              <p>This code sets the border width of the div element to 2 pixels.</p>
+            </li>
+            <li>
+              <b>Border Color</b>: The border-color property sets the color of the border. You can use named colors, hexadecimal colors, RGB values, or other valid color representations. For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+div {
+  border-color: red;
+}                                   
+                </code>
+              </deckgo-highlight-code>
+              <p>This code sets the border color of the div element to red.</p>
+            </li>
+            <li>
+              <b>Border Radius</b>: The border-radius property is used to create rounded corners for an element's border. It accepts a length value or a percentage value. For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+div {
+  border-radius: 10px;
+}                </code>
+              </deckgo-highlight-code>
+              <p>This code creates a border with rounded corners of 10 pixels for the div element.</p>
+            </li>
+            <li>
+              <b>Shorthand Border Property</b>: You can use the border shorthand property to define all border-related properties at once. The order of the values is width, style, and color. For example:
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+div {
+  border: 1px solid blue;
+}
+                </code>
+              </deckgo-highlight-code>
+              <p>This code sets the border width to 1 pixel, the style to solid, and the color to blue for the div element.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="shadows" id="CSSMargin" style="display: none;">
+          <h1>Margin</h1>
+          <p>In CSS, the margin property is used to control the spacing around an element. It defines the empty space between an element's border and the adjacent elements or the outer edges of its containing element. The margin property allows you to specify the spacing on all four sides of an element (top, right, bottom, and left) or set individual margins for each side.</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+selector {
+  margin-top: value;
+  margin-right: value;
+  margin-bottom: value;
+  margin-left: value;
+}                                    
+            </code>
+          </deckgo-highlight-code>
+          <p>Here's an example that sets the margins of a <b>div</b> element:</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+div {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}                                    
+            </code>
+          </deckgo-highlight-code>
+          <p>In this case, the top margin is 10 pixels, the right margin is 20 pixels, the bottom margin is 10 pixels, and the left margin is 20 pixels.</p><br><br>
+          <p>Alternatively, you can use the shorthand margin property to set all margins at once. The order of values is as follows: top, right, bottom, and left. Here's an example:</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+div {
+  margin: 10px 20px 10px 20px;
+}                                    
+            </code>
+          </deckgo-highlight-code>
+          <p>This code achieves the same result as the previous example, setting the top, right, bottom, and left margins to 10 pixels, 20 pixels, 10 pixels, and 20 pixels, respectively.</p>
+        </div>
+        <div class="shadows" id="CSSPadding" style="display: none;">
+          <h1>Padding</h1>
+          <p>In CSS, the padding property is used to control the spacing between the content of an element and its borders. It defines the empty space between an element's content and its border. The padding property allows you to specify the spacing on all four sides of an element (top, right, bottom, and left) or set individual padding values for each side.</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+selector {
+  padding-top: value;
+  padding-right: value;
+  padding-bottom: value;
+  padding-left: value;
+}            </code>
+          </deckgo-highlight-code>
+          <p>Here's an example that sets the margins of a <b>div</b> element:</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+div {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}                                   
+            </code>
+          </deckgo-highlight-code>
+          <p>In this case, the top padding is 10 pixels, the right padding is 20 pixels, the bottom padding is 10 pixels, and the left padding is 20 pixels.</p>
+          <p>Alternatively, you can use the shorthand padding property to set all paddings at once. The order of values is as follows: top, right, bottom, and left. Here's an example:</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+div {
+  padding: 10px 20px 10px 20px;
+}                                  
+            </code>
+          </deckgo-highlight-code>
+          <p>This code achieves the same result as the previous example, setting the top, right, bottom, and left padding to 10 pixels, 20 pixels, 10 pixels, and 20 pixels, respectively.</p>
+        </div>
+        <div class="shadows" id="CSSBoxModel" style="display: none;">
+          <h1>How to Add CSS</h1>
+          <p>The box model is a fundamental concept in CSS that describes how elements are rendered and how their dimensions and spacing are calculated. It represents the structure of an element as a rectangular box, with various layers that determine its overall size and positioning.</p><br><br>
+          <p>The CSS box model consists of four main components:</p>      
+          <ol>
+            <li>
+              <b>Content</b>: The innermost layer of the box model is the actual content of the element, such as text, images, or other HTML elements.
+            </li>
+            <li>
+              <b>Padding</b>: The padding is the space between the content and the element's border. It provides extra space inside the element to separate its content from the border. The padding can be set using the padding property.
+            </li>
+            <li>
+              <b>Border</b>: The border is the next layer outside the padding and encloses the content and padding of the element. It can be styled with a specific color, style, and width using the border property.
+            </li>
+            <li>
+              <b>Margin</b>: The margin is the outermost layer of the box model and provides space between the element and adjacent elements. It creates separation between elements on the page. The margin can be set using the margin property.
+            </li>
+            <p>The total width and height of an element are calculated by adding the content width/height, padding, border, and margin together. It's important to consider the box model when working with CSS layouts to ensure proper spacing and positioning of elements.</p>
+            <!-- <img class="removecenter" src="../images/Asset/TypeOfCss.png" alt="css3-logo-png-transparent" /> -->
+            <img class="removecenter" src="../images/Asset/box-model-of-CSS.png" alt="css3-logo-png-transparent" height="500px" width="500px" />
+          </ol>
+        </div>
+        <div class="shadows" id="CSSHeight" style="display: none;">
+          <h1>Height</h1>
+          <p>In CSS, the height property is used to set the height of an element. It determines the vertical size of the content box of an element, excluding any padding, border, or margin.</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+div {
+  height: 200px;
+}
+            </code>
+          </deckgo-highlight-code>
+        </div>
+        <div class="shadows" id="CSSWidth" style="display: none;">
+          <h1>Width</h1>
+          <p>In CSS, the width property is used to set the width of an element. It determines the horizontal size of the content box of an element, excluding any padding, border, or margin.</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+div {
+  width: 300px;
+}
+            </code>
+          </deckgo-highlight-code>
+        </div>
+        <div class="shadows" id="CSSPosition" style="display: none">
+          <h1>Position</h1>
+          <p>In CSS, the position property is used to control the positioning of elements on a web page. There are several values that can be used with the position property, each with its own behavior. Here are the commonly used values with examples:</p>
+          <ol>
+            <li>
+              <b>Static</b>: This is the default value, and elements with position: static are positioned according to the normal flow of the document. They are not affected by the top, bottom, left, right, or z-index properties.
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+.static-example {
+  position: static;
+}                                    
+                </code>
+              </deckgo-highlight-code>
+            </li>
+            <li>
+              <b>Relative</b>: relative, an element is positioned relative to its normal position. You can use the top, bottom, left, and right properties to move the element from its original position.
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+.relative-example {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}                </code>
+              </deckgo-highlight-code>
+            </li>
+            <li>
+              <b>Absolute</b>: When an element has position: absolute, it is positioned relative to its closest positioned ancestor (or the document if there is no positioned ancestor). This value allows you to precisely position an element on the page.
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+.absolute-example {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}                                   
+                </code>
+              </deckgo-highlight-code>
+            </li>
+            <li>
+              <b>Fixed</b>: Elements with position: fixed are positioned relative to the viewport, meaning they remain fixed even when the page is scrolled. This is commonly used for elements like navigation bars or sticky headers.
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+.fixed-example {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+                </code>
+              </deckgo-highlight-code>
+            </li>
+            <li>
+              <b>Sticky</b>: With position: sticky, an element is positioned based on the user's scroll position. It acts as relative within its parent until a specified threshold is reached, and then becomes fixed. It's often used for elements that should "stick" to a certain position while scrolling.
+              <deckgo-highlight-code language="css" style="font-size: 15px">
+                <code slot="code"> 
+.sticky-example {
+  position: sticky;
+  top: 20px;
+}
+                </code>
+              </deckgo-highlight-code>
+            </li>
+          </ol>
+          <p>These are the main values of the position property in CSS. By using these values and adjusting the corresponding properties (top, bottom, left, right), you can control the positioning of elements on your web page.</p>
+        </div>
+      </div>
+    </section>
+    <!-- footer section starts  -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>explore</h3>
+          <a href="../home.html">
+            <i class="fas fa-arrow-right"></i> home </a>
+          <a href="../about.html">
+            <i class="fas fa-arrow-right"></i> about </a>
+          <!-- <a href="course-1.html"><i class="fas fa-arrow-right"></i> course-1 </a><a href="course-2.html"><i class="fas fa-arrow-right"></i>course-2 </a><a href="course-3.html"><i class="fas fa-arrow-right"></i> course-3 </a><a href="teachers.html"><i class="fas fa-arrow-right"></i> teachers </a><a href="blog.html"><i class="fas fa-arrow-right"></i> blog </a><a href="contact.html"><i class="fas fa-arrow-right"></i> contact </a> -->
+        </div>
+        <div class="box">
+          <h3>categories</h3>
+          <!-- <a href="#"><i class="fas fa-arrow-right"></i> web design </a><a href="#"><i class="fas fa-arrow-right"></i> graphic design</a><a href="#"><i class="fas fa-arrow-right"></i> UI / UX design</a><a href="#"><i class="fas fa-arrow-right"></i> seo marketing</a><a href="#"><i class="fas fa-arrow-right"></i> digital marketing</a> -->
+          <a href="#">
+            <i class="fas fa-arrow-right"></i> email marketing </a>
+          <a href="#">
+            <i class="fas fa-arrow-right"></i> all courses </a>
+        </div>
+        <!-- <div class="box"><h3>quick links</h3><a href="#"><i class="fas fa-arrow-right"></i> my account </a><a href="#"><i class="fas fa-arrow-right"></i> feedback </a><a href="#"><i class="fas fa-arrow-right"></i> help center </a><a href="#"><i class="fas fa-arrow-right"></i> certificates </a><a href="#"><i class="fas fa-arrow-right"></i> newsletter </a></div> -->
+        <div class="box">
+          <h3>follow us</h3>
+          <!-- <a href="#"><i class="fab fa-facebook-f"></i> facebook </a><a href="#"><i class="fab fa-twitter"></i> twitter </a><a href="#"><i class="fab fa-linkedin"></i> linkedin </a><a href="#"><i class="fab fa-instagram"></i> instagram </a> -->
+          <a href="#">
+            <i class="fab fa-pinterest"></i> pinterest </a>
+          <a href="#">
+            <i class="fab fa-github"></i> github </a>
+        </div>
+      </div>
+      <div class="credit"> created by <span>Lahulesh Chourasiya</span> | all rights reserved! </div>
+    </section>
+    <!-- footer section ends -->
+    <!-- custom js file link  -->
+    <script src="../js/script.js"></script>
+    <script type="module" src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+    <script>
+      var anchordiv = ["CSSIntroductionanchor", "Implementationanchor", "CSSSyntaxanchor","CSSCommentsanchor","CSSColouranchor","CSSBackgroundanchor","CSSBorderanchor","Marginanchor","CSSPaddinganchor","CSSBoxModelanchor","CSSHeightanchor",
+      "CSSWidthanchor","CSSPositionanchor","CSSFontsanchor","CSSIconsanchor"];
+
+      var divs = ["CSSIntroduction", "Implementation", "CSSSyntax","CSSComments","CSSColour","CSSBackground","CSSBorder","CSSMargin","CSSPadding","CSSBoxModel","CSSHeight",
+      "CSSWidth","CSSPosition","CSSFonts","CSSIcons"];
+      var visibleDivId = null;
+
+      function divVisibility(divId) {
+        if (visibleDivId === divId) {
+          visibleDivId = null;
+        } else {
+          visibleDivId = divId;
+        }
+        hideNonVisibleDivs();
+      }
+
+      function hideNonVisibleDivs() {
+        var i, divId, div;
+        for (i = 0; i < divs.length; i++) {
+          divId = divs[i];
+          div = document.getElementById(divId);
+          let index = divs.indexOf(visibleDivId);
+          var valueAtIndex1 = anchordiv[index];
+          console.log(visibleDivId);
+          if (visibleDivId === divId) {
+            div.style.display = "block";
+          } else {
+            div.style.display = "none";
+          }
+        }
+      }
+    </script>
+    <script>
+      function toggleItem(elem) {
+        for (var i = 0; i < elem.length; i++) {
+          elem[i].addEventListener("click", function(e) {
+            var current = this;
+            for (var i = 0; i < elem.length; i++) {
+              if (current != elem[i]) {
+                elem[i].classList.remove("active");
+              } else if (current.classList.contains("active") === true) {
+                current.classList.remove("active");
+              } else {
+                current.classList.add("active");
+              }
+            }
+            e.preventDefault();
+          });
+        }
+      }
+      toggleItem(document.querySelectorAll(".link"));
+    </script>
+    <script>
+      // window.onscroll = function() {
+      //   scrollFunction()
+      // };
+
+      // function scrollFunction() {
+      //   console.log(document.body.scrollTop+" Body");
+      //   console.log(document.documentElement.scrollTop+" Document");
+      //   if (document.documentElement.scrollTop > 160) {
+      //     //document.getElementById("navbar").style.padding = "10px 10px";
+      //     //document.getElementById("logo").style.fontSize = "10px";
+      //     console.log("500 ifffffffff");
+      //     document.getElementById("navbar").classList.add("fixed");
+      //     document.getElementById("CSSIntroduction").style.marginLeft = "265px";
+      //     document.getElementById("Implementation").style.marginLeft = "265px";
+      //     document.getElementById("CSSSyntax").style.marginLeft = "265px";
+      //   } else {
+      //     document.getElementById("navbar").classList.remove("fixed");
+      //     document.getElementById("CSSIntroduction").style.marginLeft = "245px";
+      //     document.getElementById("Implementation").style.marginLeft = "245px";
+      //     document.getElementById("CSSSyntax").style.marginLeft = "245px";
+      //     //document.getElementById("navbar").classList.add("sticky");
+      //     console.log("500 Elseeeeeeee");
+      //     //document.getElementById("navbar").style.padding = "80px 10px";
+      //     //document.getElementById("logo").style.fontSize = "45px";
+      //   }
+      // }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module"src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <deckgo-highlight-code language="css">
+      <code slot="code">
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+        const xmlDoc = this.responseXML;
+        const x = xmlDoc.getElementsByTagName("ARTIST");
+        let txt = "";
+        for (let i = 0; i < x.length; i++) {
+            txt = txt + x[i].childNodes[0].nodeValue + "<br>";
+        }
+        document.getElementById("demo").innerHTML = txt;
+        }
+        xhttp.open("GET", "cd_catalog.xml");
+        xhttp.send();
+      </code>
+    </deckgo-highlight-code>
+
+    <deckgo-highlight-code language="html">
+      <code slot="code">
+        &lt;p> *{ margin: 0px; padding: 0px; font-family: "Poppins"; }
+        .container{ width: 100%; height: 100%; } &lt;/p>
+      </code>
+    </deckgo-highlight-code>
+  </body>
+</html>
