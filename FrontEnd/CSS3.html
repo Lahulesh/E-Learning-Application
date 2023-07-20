@@ -65,6 +65,10 @@
 
       .shadows {
         margin-left: 245px;
+        scrollbar-width: none;
+      }
+      .shadows::-webkit-scrollbar {
+        display: none;
       }
 
       /* #navbar {
@@ -112,7 +116,7 @@
     <section class="contact">
       <div class="row">
         <nav id="navbar" style="width: 10px;">
-          <div id="nav">
+          <div id="nav" style="overflow: scroll;width: 256px;height: 100vh">
             <ul>
               <li class="link active" id="CSSIntroductionanchor" onclick="divVisibility('CSSIntroduction');">
                 <a href="#">CSS Introduction</a>
@@ -533,7 +537,7 @@ div {
           <p>This code achieves the same result as the previous example, setting the top, right, bottom, and left padding to 10 pixels, 20 pixels, 10 pixels, and 20 pixels, respectively.</p>
         </div>
         <div class="shadows" id="CSSBoxModel" style="display: none;">
-          <h1>How to Add CSS</h1>
+          <h1>Box Model</h1>
           <p>The box model is a fundamental concept in CSS that describes how elements are rendered and how their dimensions and spacing are calculated. It represents the structure of an element as a rectangular box, with various layers that determine its overall size and positioning.</p><br><br>
           <p>The CSS box model consists of four main components:</p>      
           <ol>
@@ -736,86 +740,6 @@ p {
     <!-- custom js file link  -->
     <script src="../js/script.js"></script>
     <script type="module" src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
-    <script>
-      var anchordiv = ["CSSIntroductionanchor", "Implementationanchor", "CSSSyntaxanchor","CSSCommentsanchor","CSSColouranchor","CSSBackgroundanchor","CSSBorderanchor","Marginanchor","CSSPaddinganchor","CSSBoxModelanchor","CSSHeightanchor",
-      "CSSWidthanchor","CSSPositionanchor","CSSFontsanchor","CSSIconsanchor"];
-
-      var divs = ["CSSIntroduction", "Implementation", "CSSSyntax","CSSComments","CSSColour","CSSBackground","CSSBorder","CSSMargin","CSSPadding","CSSBoxModel","CSSHeight",
-      "CSSWidth","CSSPosition","CSSFonts","CSSIcons"];
-      var visibleDivId = null;
-
-      function divVisibility(divId) {
-        if (visibleDivId === divId) {
-          visibleDivId = null;
-        } else {
-          visibleDivId = divId;
-        }
-        hideNonVisibleDivs();
-      }
-
-      function hideNonVisibleDivs() {
-        var i, divId, div;
-        for (i = 0; i < divs.length; i++) {
-          divId = divs[i];
-          div = document.getElementById(divId);
-          let index = divs.indexOf(visibleDivId);
-          var valueAtIndex1 = anchordiv[index];
-          console.log(visibleDivId);
-          if (visibleDivId === divId) {
-            div.style.display = "block";
-          } else {
-            div.style.display = "none";
-          }
-        }
-      }
-    </script>
-    <script>
-      function toggleItem(elem) {
-        for (var i = 0; i < elem.length; i++) {
-          elem[i].addEventListener("click", function(e) {
-            var current = this;
-            for (var i = 0; i < elem.length; i++) {
-              if (current != elem[i]) {
-                elem[i].classList.remove("active");
-              } else if (current.classList.contains("active") === true) {
-                current.classList.remove("active");
-              } else {
-                current.classList.add("active");
-              }
-            }
-            e.preventDefault();
-          });
-        }
-      }
-      toggleItem(document.querySelectorAll(".link"));
-    </script>
-    <script>
-      // window.onscroll = function() {
-      //   scrollFunction()
-      // };
-
-      // function scrollFunction() {
-      //   console.log(document.body.scrollTop+" Body");
-      //   console.log(document.documentElement.scrollTop+" Document");
-      //   if (document.documentElement.scrollTop > 160) {
-      //     //document.getElementById("navbar").style.padding = "10px 10px";
-      //     //document.getElementById("logo").style.fontSize = "10px";
-      //     console.log("500 ifffffffff");
-      //     document.getElementById("navbar").classList.add("fixed");
-      //     document.getElementById("CSSIntroduction").style.marginLeft = "265px";
-      //     document.getElementById("Implementation").style.marginLeft = "265px";
-      //     document.getElementById("CSSSyntax").style.marginLeft = "265px";
-      //   } else {
-      //     document.getElementById("navbar").classList.remove("fixed");
-      //     document.getElementById("CSSIntroduction").style.marginLeft = "245px";
-      //     document.getElementById("Implementation").style.marginLeft = "245px";
-      //     document.getElementById("CSSSyntax").style.marginLeft = "245px";
-      //     //document.getElementById("navbar").classList.add("sticky");
-      //     console.log("500 Elseeeeeeee");
-      //     //document.getElementById("navbar").style.padding = "80px 10px";
-      //     //document.getElementById("logo").style.fontSize = "45px";
-      //   }
-      // }
-    </script>
+    <script src="../js/SelfScript.js"></script>
   </body>
 </html>

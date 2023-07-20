@@ -16,6 +16,7 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -698,7 +699,9 @@ section {
           flex: 1 1 42rem;
   border-radius: 1rem;
   background: #f5f5f5;
-  padding: 2rem;
+  padding: 3rem;
+  overflow: auto;
+  height: 98vh;
 }
 
 .contact .row .shadows h1{
