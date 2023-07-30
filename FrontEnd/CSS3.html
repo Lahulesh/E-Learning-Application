@@ -167,6 +167,24 @@
               <li class="link" id="CSSIconsanchor" onclick="divVisibility('CSSIcons');">
                 <a href="#">Icons</a>
               </li>
+              <li class="link" id="CSSOutlineanchor" onclick="divVisibility('CSSOutline');">
+                <a href="#">Outline</a>
+              </li>
+              <li class="link" id="CSSDisplayanchor" onclick="divVisibility('CSSDisplay');">
+                <a href="#">Display</a>
+              </li>
+              <li class="link" id="CSSZindexanchor" onclick="divVisibility('CSSZindex');">
+                <a href="#">Z-Index</a>
+              </li>
+              <li class="link" id="CSSOverflowanchor" onclick="divVisibility('CSSOverflow');">
+                <a href="#">OverFlow</a>
+              </li>
+              <li class="link" id="CSSFloatanchor" onclick="divVisibility('CSSFloat');">
+                <a href="#">Float</a>
+              </li>
+              <li class="link" id="CSSOpacityanchor" onclick="divVisibility('CSSOpacity');">
+                <a href="#">Opacity</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -706,6 +724,134 @@ p {
               <p>In this case, the text in the <b>P</b> element will be underlined.</p>
             </li>
           </ol>
+        </div>
+        <div class="shadows" id="CSSIcons" style="display: none">
+          <h1>Icons</h1>
+          <p>In CSS (Cascading Style Sheets), icons refer to small, graphical representations used to convey meaning or represent actions or objects on a website or web application. These icons are typically created as vector graphics, allowing them to scale without losing quality. They are widely used in user interfaces (UI) to improve user experience and provide visual cues for various elements</p>
+          <ol>
+            <li><b>Navigation</b>: Icons are often used to represent links or menu items, making it easier for users to identify different sections of a website.</li>
+            <li><b>Actions</b>: Icons can represent common actions like "home," "search," "settings," "add," "delete," "edit," etc.</li>
+            <li><b>Status Indicators</b>:  Icons can be used to indicate the status of a process, such as "loading," "success," "error," or "warning."</li>
+            <li><b>Social Media</b>: Social media icons are commonly used to link to a website's social media profiles.</li>
+            <li><b>File Types</b>: Icons can indicate the type of a file, such as PDF, image, video, etc.</li>
+          </ol>
+          <ol>
+            <p>CSS provides several ways to include icons in a web page. Some common methods include:</p>
+            <li><b>Font Icons</b>: Using special font files that contain icon glyphs, such as Font Awesome, Material Icons, or Ionicons. You can display icons by adding the appropriate class to an HTML element and setting the font-family to the icon font.</li>
+            <li><b>SVG Icons</b>:  Including SVG (Scalable Vector Graphics) files directly in the HTML or CSS and using them as background images or inline elements.</li>
+            <li><b>Icon Libraries</b>: Utilizing CSS libraries or frameworks like Font Awesome or Bootstrap, which provide a set of pre-designed icons that you can easily use in your project.</li>
+          </ol>
+        </div>
+        <div class="shadows" id="CSSOutline" style="display: none">
+          <h1>Outline</h1>
+          <p>The outline property in CSS is used to create a visible outline around an element, typically used for highlighting or indicating focus on interactive elements like links, form fields, or buttons. It is similar to the border property but is different in how it interacts with the element's box model.</p>
+          <p>The basic syntax of the outline property is as follows:</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+outline: [outline-width] [outline-style] [outline-color];                                   
+            </code>
+          </deckgo-highlight-code>
+          <ol>
+            <li><b>outline-width</b>: This specifies the thickness of the outline. It can have values like thin, medium, thick, or a specific length (e.g., 2px).</li>
+            <li><b>outline-style</b>: This determines the style of the outline. Common values are dotted, dashed, solid, double, groove, ridge, inset, outset, or none.</li>
+            <li><b>outline-color</b>: This sets the color of the outline. It can take any valid CSS color value (e.g., red, #00ff00, rgba(255, 0, 0, 0.5)).</li>
+            <deckgo-highlight-code language="css" style="font-size: 15px">
+              <code slot="code"> 
+button {
+  outline: 2px dashed blue;
+}                </code>
+            </deckgo-highlight-code>
+          </ol>
+          <p>In this example, when you focus on a button element, it will have a dashed blue outline with a thickness of 2 pixels.</p>
+          <p>It's important to note that the outline property does not take up space in the layout of the page. Therefore, if you use it to highlight an element, it won't affect the positioning or dimensions of that element.</p>
+        </div>
+        <div class="shadows" id="CSSDisplay" style="display: none;">
+          <h1>Display</h1>
+          <p>The display property can take various values, each affecting the element's layout differently. <br>Here are some common values for the display property:</p>     
+          <ol>
+            <li><b>block</b>: The element generates a block-level box, taking up the full width available and starting on a new line. Block-level elements have a line break before and after them. Examples of block-level elements are <b>Div</b>, <b>P</b>, <b>H1</b> to <b>H6</b>, and <b>UL</b> </li>
+            <li><b>inline</b>: The element generates an inline-level box, taking up only as much width as necessary for its content. Inline-level elements do not cause line breaks before or after them. Examples of inline elements are <b>span</b>, <b>a</b> , <b>strong</b>, and <b>em</b>.</li>
+            <li><b>inline-block</b>: This value combines aspects of both block and inline. The element generates an inline-level box, but you can set a specific width and height for it. It does not cause line breaks before or after, and multiple inline-block elements can appear on the same line. This is often used to create elements that flow horizontally like inline elements but can have a width and height like block elements.</li>
+            <li><b>flex</b>: The element becomes a flex container, and its children become flex items. It allows you to use the Flexbox layout model for arranging elements within the container along a flex axis (either horizontally or vertically).</li>
+            <li><b>grid</b>: The element becomes a grid container, and its children become grid items. It allows you to use the CSS Grid layout model for arranging elements in rows and columns within the container.</li>
+            <li><b>none</b>: The element is not displayed at all. It will be removed from the flow of the document as if it doesn't exist, and its space will not be taken up by other elements.</li>
+            <li><b>inline-flex</b>: This is similar to flex, but the container behaves as an inline-level element with flex layout.</li>
+            <li><b>table, table-cell, table-row</b>: -These values allow you to create table-like structures without using actual HTML <b>table</b> elements. They are part of the CSS table layout model.</li>
+            <p>The display property is a powerful tool for controlling the layout of elements and is often used in combination with other CSS properties to create responsive and visually appealing designs.</p>
+          </ol>
+        </div>
+        <div class="shadows" id="CSSZindex" style="display: none">
+          <h1>Z-Index</h1>
+          <p>In CSS, the z-index property is used to control the stacking order of positioned elements on a web page. It determines the vertical position of an element along the z-axis, which is the axis perpendicular to the screen. Elements with a higher z-index value will appear in front of elements with a lower value.</p>
+          <p>The z-index property only works on elements that have a position value other than static. The most commonly used values for position are relative, absolute, fixed, and sticky.</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+element {
+  z-index: value;
+}                                  
+            </code>
+          </deckgo-highlight-code>
+          <p>The value can be either a positive integer, zero, or a negative integer:</p>
+          <ol>
+            <li><b>Positive integer</b>: The element is stacked above elements with lower z-index values and below elements with higher values.</li>
+            <li><b>Zero</b>: The element is stacked in its default order. Elements with z-index: 0 will be placed below elements with positive z-index values.</li>
+            <li><b>Negative integer</b>: The element is stacked below elements with positive z-index values and above elements with lower values.</li>
+        </div>
+        <div class="shadows" id="CSSOverflow" style="display: none;">
+          <h1>OverFlow</h1>
+          <p>In CSS3, the overflow property is used to control how content that overflows the bounding box of an element is displayed. It defines how the content is handled when it exceeds the dimensions of the container or if it is larger than the space available to display it.</p>
+          <ul>
+            <p>
+              <b>visible</b>: Any content that overflows the container will be clipped and not visible. It will be effectively hidden, and users won't be able to see it.
+            </p>
+            <p>
+              <b>hidden</b>: You can include CSS styles within the style tags in the head section of your HTML document.
+            </p>
+            <p>
+              <b>scroll</b>: The container will display horizontal and vertical scrollbars, allowing users to scroll and see the entire content that overflows the container.
+            </p>
+          </ul>
+        </div>
+        <div class="shadows" id="CSSFloat" style="display: none">
+          <h1>Float</h1>
+          <p>In CSS, "float" is a property that allows an element to be positioned along the left or right side of its containing element, while allowing other content to flow around it. When an element is floated, it is taken out of the normal document flow, which means other block-level elements will ignore the space it occupies, and they will wrap around it instead.</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+element {
+  float: left | right | none | initial | inherit;
+}                                   
+            </code>
+          </deckgo-highlight-code>
+          <ol>
+            <li><b>left</b>: The element is floated to the left side, and content will wrap around its right side.</li>
+            <li><b>right</b>: The element is floated to the right side, and content will wrap around its left side.</li>
+            <li><b>none (default)</b>:  The element is not floated, and it will be placed in the normal document flow.</li>
+            <li><b>initial</b>: The property takes the default value.</li>
+            <li><b>inherit</b>: The property takes the value from its parent element.</li>
+          </ol>
+        </div>
+        <div class="shadows" id="CSSOpacity" style="display: none">
+          <h1>Opacity</h1>
+          <p>In CSS, the opacity property is used to control the transparency or the level of opacity of an element, including all of its child elements. It allows you to make an element partially transparent, revealing the content behind it. The opacity property accepts values between 0 and 1, where 0 represents completely transparent (invisible), and 1 represents completely opaque (fully visible).</p>
+          <deckgo-highlight-code language="css" style="font-size: 15px">
+            <code slot="code"> 
+element {
+  opacity: value;
+}                         
+            </code>
+          </deckgo-highlight-code>
+          <ol>
+            <li><b>value</b>: A numerical value between 0 and 1. The value 0 makes the element completely transparent, and the value 1 makes it fully opaque.</li>
+            <deckgo-highlight-code language="css" style="font-size: 15px">
+              <code slot="code"> 
+Example:
+.transparent-element {
+  opacity: 0.5; /* The element and its content will be 50% transparent */
+}                        
+              </code>
+            </deckgo-highlight-code>
+          </ol>
+          <p>It's important to note that the opacity property affects the transparency of an element and all its child elements. This means that if you set an element to be partially transparent, all the content within that element will also have the same transparency level.</p>
         </div>
       </div>
     </section>

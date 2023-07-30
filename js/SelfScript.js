@@ -1,8 +1,11 @@
 var anchordiv = ["CSSIntroductionanchor", "Implementationanchor", "CSSSyntaxanchor","CSSCommentsanchor","CSSColouranchor","CSSBackgroundanchor","CSSBorderanchor","Marginanchor","CSSPaddinganchor","CSSBoxModelanchor","CSSHeightanchor",
-"CSSWidthanchor","CSSPositionanchor","CSSFontsanchor","CSSIconsanchor"];
+"CSSWidthanchor","CSSPositionanchor","CSSFontsanchor","CSSIconsanchor","CSSOutlineanchor",
+"CSSDisplayanchor","CSSZindexanchor","CSSOverflowanchor","CSSFloatanchor","CSSOpacityanchor"];
 
 var divs = ["CSSIntroduction", "Implementation", "CSSSyntax","CSSComments","CSSColour","CSSBackground","CSSBorder","CSSMargin","CSSPadding","CSSBoxModel","CSSHeight",
-"CSSWidth","CSSPosition","CSSFonts","CSSIcons"];
+"CSSWidth","CSSPosition","CSSFonts","CSSIcons","CSSOutline","CSSDisplay","CSSZindex",
+"CSSOverflow","CSSFloat","CSSOpacity"];
+
 var visibleDivId = null;
 
 function divVisibility(divId) {
